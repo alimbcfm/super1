@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة سوبر ماركت</title>
+    <link rel="stylesheet" href="working.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>إدارة سوبر ماركت</h1>
+            <nav>
+                <ul>
+                    <li><a href="#add-product">إضافة منتج</a></li>
+                    <li><a href="#view-products">عرض المنتجات</a></li>
+                    <li><a href="#bill">حساب الفاتورة</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="add-product">
+            <h2>إضافة منتج جديد</h2>
+            <form id="add-product-form">
+                <label for="product-name">اسم المنتج</label>
+                <input type="text" id="product-name" required>
+
+                <label for="product-price">السعر</label>
+                <input type="number" id="product-price" required>
+
+                <label for="product-quantity">الكمية</label>
+                <input type="number" id="product-quantity" required>
+
+                <button type="submit">إضافة منتج</button>
+            </form>
+        </section>
+
+        <section id="view-products">
+            <h2>قائمة المنتجات</h2>
+            <table id="products-table">
+                <thead>
+                    <tr>
+                        <th>الاسم</th>
+                        <th>السعر</th>
+                        <th>الكمية</th>
+                        <th>العملية</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- المنتجات ستظهر هنا بواسطة جافا سكريبت -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="bill">
+            <h2>حساب الفاتورة</h2>
+            <form id="bill-form">
+                <label for="product-select">اختر المنتج</label>
+                <select id="product-select">
+                    <!-- المنتجات ستظهر هنا بواسطة جافا سكريبت -->
+                </select>
+
+                <label for="product-quantity-bill">الكمية</label>
+                <input type="number" id="product-quantity-bill" required>
+
+                <button type="submit">إضافة للفاتورة</button>
+            </form>
+
+            <h3>الإجمالي: <span id="total-bill">0</span> جنيه</h3>
+        </section>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
